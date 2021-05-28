@@ -11,7 +11,7 @@ on:
     types: [multiple]
   workflow_dispatch:
   schedule:
-  - cron: 0 04 * * 6
+    - cron: 0 04 * * 6
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
