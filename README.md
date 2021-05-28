@@ -63,7 +63,8 @@ chmod   755  update-amlogic-openwrt.sh
 ```
 ------
  # 感激 
- [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)提供的脚本参考
+  * [mingxiaoyu](https://github.com/mingxiaoyu)
+  * [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)提供的脚本参考
  
  ## 云编译的规格
 https://docs.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners#supported-runners-and-hardware-resources
