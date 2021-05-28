@@ -91,7 +91,6 @@ jobs:
         cp openwrt-armvirt-64-default-rootfs.tar.gz  ${UPLOAD}/openwrt-armvirt-64-default-rootfs.tar.gz
         cp -r *.xz ${UPLOAD}/
         echo "::set-output name=status::success"       
-
     - name: Package OpenWrt with flippy script
       uses: mingxiaoyu/package-flippy-openwrt@main
       with:
@@ -116,7 +115,7 @@ jobs:
       uses: dev-drprasad/delete-older-releases@v0.1.0
       if: env.RELEASE == 'true' && !cancelled()
       with:
-        keep_latest: 6
+        keep_latest: 3
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
