@@ -4,7 +4,7 @@ N1 OpenWrt.
 
 默认自定义防火墙: iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
 
-~~每三天自动编译一次~~
+
 
 # 如何使用
 1. fork项目
