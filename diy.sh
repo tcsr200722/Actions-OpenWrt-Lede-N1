@@ -51,13 +51,13 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 rm -rf ../lean/luci-theme-argon
 
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages.git
-# rm -rf ./openwrt-packages/luci-app-ssr-plus
+rm -rf ./openwrt-packages/luci-app-ssr-plus
 rm -rf ./openwrt-packages/luci-app-serverchan
 rm -rf ./openwrt-packages/luci-app-openclash
-# rm -rf ./openwrt-packages/luci-app-jd-dailybonus
-# rm -rf ./openwrt-packages/luci-theme-argon_new
+rm -rf ./openwrt-packages/luci-app-jd-dailybonus
+rm -rf ./openwrt-packages/luci-theme-argon_new
 rm -rf ./openwrt-packages/naiveproxy
-# rm -rf ./openwrt-packages/tcping
+rm -rf ./openwrt-packages/tcping
 
 git clone --depth=1 https://github.com/kenzok8/small
 rm -rf ./small/v2ray-plugin
