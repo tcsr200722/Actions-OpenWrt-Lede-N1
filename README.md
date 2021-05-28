@@ -1,4 +1,4 @@
- ![applist](https://github.com/roacn/N1Openwrt/blob/master/imgs/N1.jpg?raw=true)
+ ![applist](https://github.com/roacn/N1Openwrt/blob/master/imgs/N1-OpenWrt.jpg?raw=true)
  
 N1 OpenWrt.
 
