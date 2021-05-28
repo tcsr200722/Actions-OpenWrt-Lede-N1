@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: N1_Openwrt_Single_Mini_Version
+name: N1_Single_Mini_Version
 
 on:
   repository_dispatch:
@@ -103,7 +103,7 @@ jobs:
       if: steps.compile.outputs.status == 'success' && env.RELEASE == 'true' && !cancelled()
       uses: ncipollo/release-action@v1
       with:
-        name: ${{ env.DATE }} 🚀 / N1_Openwrt_Single_Mini_Version | 编译
+        name: ${{ env.DATE }} 🚀 / N1_Single_Mini_Version | 编译
         allowUpdates: true
         tag: ${{ env.tag_name }}
         commit: master
