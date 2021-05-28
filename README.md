@@ -21,7 +21,7 @@ N1 OpenWrt.
 ## 用户名和密码
  * User: root
  * Password: password
- * Default IP: 192.168.32.2
+ * Default IP: 192.168.1.2
 ------
 
 ## app list:（mini 图不代表最新的）
