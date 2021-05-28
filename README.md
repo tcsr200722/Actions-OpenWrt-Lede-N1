@@ -1,5 +1,3 @@
-![N1](https://github.com/mingxiaoyu/N1Openwrt/workflows/N1/badge.svg)
-
 N1 OpenWrt.
 
 # 喜欢的可以给个star。要自己编译独一无二的可以fork。如果有人要贝壳云等其他的，可以提issue。我就加上去。再次感谢各位。
