@@ -71,7 +71,7 @@ jobs:
         ls -a
         make defconfig
         
-        cp .config ${UPLOAD}/build.config
+        cp .config ${UPLOAD}/plus.config
 
     - name: Upload Config
       uses: actions/upload-artifact@master
