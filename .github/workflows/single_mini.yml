@@ -108,7 +108,12 @@ jobs:
         commit: master
         token: ${{ secrets.RELEASES_TOKEN  }}
         body: |
-          当前使用版本:（编译前的最后一次源码更新记录）
+          默认IP：192.168.1.2 默认密码： password
+          全新刷入emmc方法：
+             1. 固件刷入U盘。
+             2. cd root
+             3. ./install-to-emmc.sh
+             4. 拔掉U盘，断电重启。
         artifacts:  ${{ env.UPLOAD }}/*
         
     - name: Remove old Releases
