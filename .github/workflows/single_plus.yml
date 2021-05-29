@@ -101,14 +101,14 @@ jobs:
         cp -r *.xz ${UPLOAD}/
         echo "::set-output name=status::success"       
 
-    - name: Package OpenWrt with flippy script
+    - name: Package OpenWrt with flippy script 使用flippy脚本打包
       uses: mingxiaoyu/package-flippy-openwrt@main
       with:
         types: s905d
         out: ${{ env.UPLOAD }}
         openwrt-path: $GITHUB_WORKSPACE/openwrt/bin/targets/*/*
    
-    - name: Create release
+    - name: Create release 发布至release
       if: steps.compile.outputs.status == 'success' && env.RELEASE == 'true' && !cancelled()
       uses: ncipollo/release-action@v1
       with:
@@ -126,7 +126,7 @@ jobs:
              4. 拔掉U盘，断电重启。
         artifacts:  ${{ env.UPLOAD }}/*
         
-    - name: Remove old Releases
+    - name: Remove old Releases 删除旧的release
       uses: dev-drprasad/delete-older-releases@v0.1.0
       if: env.RELEASE == 'true' && !cancelled()
       with:
