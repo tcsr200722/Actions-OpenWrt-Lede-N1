@@ -4,7 +4,7 @@
 # Author: mingxiaoyu
 #=================================================
 
-name: N1 Multiple Version
+name: N1_Multiple_Version
 
 on:
   repository_dispatch:
