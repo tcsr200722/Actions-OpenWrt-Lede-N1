@@ -18,10 +18,8 @@ on:
         description: 'Force update'
         required: false
         default: 'false'
-#  schedule:
-#    - cron: 0 3 */3 * *
   schedule:
-    - cron: 0 4 * * 5
+    - cron: 0 3 */3 * *
 
 env:
     MULTIPLE_BUILD: true
