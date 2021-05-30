@@ -114,7 +114,7 @@ jobs:
       with:
         name: ${{ env.DATE }} 🚀 / N1_Single_Plus_Version | 编译
         allowUpdates: true
-        tag: ${{ env.tag_name }}
+        tag: N1_Single_Plus_Version_${{ env.tag_name }}
         commit: master
         token: ${{ secrets.RELEASES_TOKEN  }}
         body: |
