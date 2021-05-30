@@ -86,7 +86,7 @@ jobs:
         
         make -j$(nproc) || make -j1 || make -j1 V=s
         
-        cp .config ${UPLOAD}/build.config
+        cp .config ${UPLOAD}/mini.config
         cd bin/targets/*/*
         cp openwrt-armvirt-64-default-rootfs.tar.gz  ${UPLOAD}/openwrt-armvirt-64-default-rootfs.tar.gz
         cp -r *.xz ${UPLOAD}/
