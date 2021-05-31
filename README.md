@@ -24,11 +24,9 @@ N1 OpenWrt.
 ------
 
 ## app list:（mini 图不代表最新的）
- * UU网游加速器
  * jd-dailybonus
  * ssr+
  * ServerChan
- * unblockmusic
  * aria2
  * ddns
  * samba4
@@ -37,7 +35,6 @@ N1 OpenWrt.
  * docker
  * cifs(挂载 SMB/CIFS 网络共享文件夹)
  * vsftpd
- * usb_printer
  * zerotier
  * flowoffload
  * WIFI
