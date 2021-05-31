@@ -102,7 +102,7 @@ jobs:
       if: steps.compile.outputs.status == 'success' && env.RELEASE == 'true' && !cancelled()
       uses: ncipollo/release-action@v1
       with:
-        name: ${{ env.DATE }} 🚀 / N1_Single_Mini_Version | 编译
+        name: ${{ env.FILE_TIME }} 🚀 / N1_Single_Mini_Version | 编译
         allowUpdates: true
         tag: N1_Single_Mini_Version_${{ env.FILE_TIME }}
         commit: master
