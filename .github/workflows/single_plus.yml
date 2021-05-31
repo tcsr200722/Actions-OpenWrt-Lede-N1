@@ -51,9 +51,7 @@ jobs:
         
         cd /upload
         echo "UPLOAD=$PWD" >> $GITHUB_ENV
-        
-        echo "tag_name=$(date +%Y%m%d%H)" >> $GITHUB_ENV
-        
+                
     - name: Clone source code 下载固件源码
       working-directory: /workdir
       run: |
@@ -99,6 +97,7 @@ jobs:
         cd bin/targets/*/*
         cp openwrt-armvirt-64-default-rootfs.tar.gz  ${UPLOAD}/openwrt-armvirt-64-default-rootfs.tar.gz
         cp -r *.xz ${UPLOAD}/
+        echo "FILE_TIME=$(date "+%Y年%m月%d日-%H点")" >> $GITHUB_ENV
         echo "::set-output name=status::success"       
 
     - name: Package OpenWrt with flippy script 使用flippy脚本打包
@@ -114,7 +113,7 @@ jobs:
       with:
         name: ${{ env.DATE }} 🚀 / N1_Single_Plus_Version | 编译
         allowUpdates: true
-        tag: N1_Single_Plus_Version_${{ env.tag_name }}
+        tag: N1_Single_Plus_Version_${{ env.FILE_TIME }}
         commit: master
         token: ${{ secrets.RELEASES_TOKEN  }}
         body: |
