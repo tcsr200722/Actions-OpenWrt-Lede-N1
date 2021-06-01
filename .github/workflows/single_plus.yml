@@ -18,6 +18,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
+  FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: plus.config
   DIY_SH: diy.sh
   TZ: Asia/Shanghai
