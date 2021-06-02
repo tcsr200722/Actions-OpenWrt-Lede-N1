@@ -20,6 +20,7 @@ echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/c
 
 # Add luci-app-amlogic
 #svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
+# --depth=1 clone最近的一个版本来
 git clone --depth=1 https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
 
 # Modify some code adaptation
