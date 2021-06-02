@@ -54,8 +54,8 @@ git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
 
 # Add luci-theme-argon
-# git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-# rm -rf ../lean/luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+rm -rf ../lean/luci-theme-argon
 
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages.git
 rm -rf ./openwrt-packages/luci-app-adguardhome
