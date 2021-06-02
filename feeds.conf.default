@@ -10,4 +10,5 @@ src-git helloworld https://github.com/fw876/helloworld
 src-git moruiris https://github.com/moruiris/openwrt-packages
 src-git kenzok https://github.com/kenzok8/openwrt-packages
 src-git small https://github.com/kenzok8/small
-src-git amlogic https://github.com/roacn/luci-app-amlogic.git
+src-git amlogic https://github.com/roacn/luci-app-amlogic
+src-git cpufreq https://github.com/roacn/luci-app-cpufreq
