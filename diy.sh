@@ -44,18 +44,18 @@ pushd package/community
 #git clone  --depth=1 https://github.com/project-openwrt/luci-app-unblockneteasemusic.git 
 
 # Add ServerChan
-git clone --depth=1 https://github.com/tty228/luci-app-serverchan
+# git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add OpenClash
-git clone --depth=1 https://github.com/vernesong/OpenClash
+# git clone --depth=1 https://github.com/vernesong/OpenClash
 
 # Docker
 git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
 
 # Add luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-rm -rf ../lean/luci-theme-argon
+# git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+# rm -rf ../lean/luci-theme-argon
 
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages.git
 rm -rf ./openwrt-packages/luci-app-adguardhome
