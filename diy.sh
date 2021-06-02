@@ -19,7 +19,6 @@ sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='Asia\/Shanghai'/g" 
 echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
 
 # Add luci-app-amlogic
-#svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
 # depth用于指定克隆深度，为1即表示只克隆最近一次commit.
 git clone --depth=1 https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
 
