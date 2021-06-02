@@ -21,9 +21,10 @@ echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/c
 # Add luci-app-amlogic
 # depth用于指定克隆深度，为1即表示只克隆最近一次commit.
 git clone --depth=1 https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
+git clone --depth=1 https://github.com/roacn/luci-app-amlogic/trunk/luci-lib-fs
 
 # Add luci-app-cpufreq
-git clone --depth=1 
+git clone --depth=1 https://github.com/roacn/luci-app-cpufreq/trunk/luci-app-cpufreq
 
 # Modify some code adaptation
 #sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/lean/luci-app-cpufreq/Makefile
