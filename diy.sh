@@ -18,6 +18,8 @@ sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='Asia\/Shanghai'/g" 
 # 修改N1做旁路由的防火墙设置
 echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
 
+pushd package/lean
+
 # Add luci-app-amlogic
 svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
 svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-lib-fs
@@ -26,7 +28,6 @@ svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-lib-fs
 # svn co https://github.com/roacn/luci-app-cpufreq/trunk/luci-app-cpufreq
 
 # Add luci-app-ssr-plus
-pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld
 cat > helloworld/luci-app-ssr-plus/root/etc/ssrplus/black.list << EOF
 services.googleapis.cn
