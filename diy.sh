@@ -27,7 +27,7 @@ svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
 # Add luci-app-cpufreq
 rm -rf ./luci-app-cpufreq
 # svn co https://github.com/roacn/luci-app-cpufreq/trunk/luci-app-cpufreq
-git clone https://github.com/roacn/cpufreq
+git clone https://github.com/roacn/luci-app-cpufreq
 
 # Add luci-app-ssr-plus
 git clone --depth=1 https://github.com/fw876/helloworld
