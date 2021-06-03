@@ -80,7 +80,7 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 rm -rf ./openwrt-packages/luci-app-serverchan
 #rm -rf ./openwrt-packages/luci-app-ssr-plus
 # rm -rf ./openwrt-packages/luci-app-openclash
-# rm -rf ./openwrt-packages/luci-theme-argon_new
+rm -rf ./openwrt-packages/luci-theme-argon_new
 
 git clone --depth=1 https://github.com/kenzok8/small
 rm -rf ./small/v2ray-plugin
