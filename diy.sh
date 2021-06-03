@@ -19,12 +19,11 @@ sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='Asia\/Shanghai'/g" 
 echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
 
 # Add luci-app-amlogic
-# depth用于指定克隆深度，为1即表示只克隆最近一次commit.
-git clone --depth=1 https://github.com/ophub/luci-app-amlogic/tree/main/luci-app-amlogic package/lean/luci-app-amlogic
-git clone --depth=1 https://github.com/ophub/luci-app-amlogic/tree/main/luci-lib-fs package/lean/luci-lib-fs
+svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
+svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-lib-fs
 
 # Add luci-app-cpufreq
-# git clone --depth=1 https://github.com/roacn/luci-app-cpufreq/tree/main/luci-app-cpufreq package/lean/luci-app-cpufreq
+# svn co https://github.com/roacn/luci-app-cpufreq/trunk/luci-app-cpufreq
 
 # Add luci-app-ssr-plus
 pushd package/lean
@@ -42,14 +41,15 @@ mkdir package/community
 pushd package/community
 
 # Add luci-app-adguardhome
+# depth用于指定克隆深度，为1即表示只克隆最近一次commit.
 # git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome
 
 # Add luci-app-amlogic
-svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/lean/luci-app-amlogic
+svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
+svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-lib-fs
 
 # Add luci-app-cpufreq
-svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-lib-fs package/lean/luci-lib-fs
-svn co https://github.com/roacn/luci-app-cpufreq/trunk/luci-app-cpufreq package/lean/luci-app-cpufreq
+# svn co https://github.com/roacn/luci-app-cpufreq/trunk/luci-app-cpufreq
 
 # Add luci-app-diskman
 git clone --depth=1 https://github.com/lisaac/luci-app-diskman
@@ -73,7 +73,7 @@ svn co https://github.com/project-openwrt/openwrt/trunk/package/ntlf9t/luci-app-
 git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add luci-app-openclash
-git clone --depth=1 https://github.com/vernesong/OpenClash
+# git clone --depth=1 https://github.com/vernesong/OpenClash
 
 # Add luci-app-onliner (need luci-app-nlbwmon)
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
@@ -83,17 +83,16 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 rm -rf ../lean/luci-theme-argon
 
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages.git
-rm -rf ./openwrt-packages/luci-app-adguardhome
 rm -rf ./openwrt-packages/luci-app-ssr-plus
 rm -rf ./openwrt-packages/luci-app-serverchan
-rm -rf ./openwrt-packages/luci-app-openclash
+# rm -rf ./openwrt-packages/luci-app-openclash
 # rm -rf ./openwrt-packages/luci-theme-argon_new
 
-#git clone --depth=1 https://github.com/kenzok8/small
-#rm -rf ./small/v2ray-plugin
-#rm -rf ./small/xray-core
-#rm -rf ./small/xray-plugin
-#rm -rf ./small/shadowsocks-rust
+git clone --depth=1 https://github.com/kenzok8/small
+rm -rf ./small/v2ray-plugin
+rm -rf ./small/xray-core
+rm -rf ./small/xray-plugin
+rm -rf ./small/shadowsocks-rust
 
 popd
 
