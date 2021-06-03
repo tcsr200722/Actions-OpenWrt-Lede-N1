@@ -22,7 +22,7 @@ pushd package/lean
 
 # Add luci-app-amlogic
 svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
-svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-lib-fs
+# svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-lib-fs
 
 # Add luci-app-cpufreq
 # svn co https://github.com/roacn/luci-app-cpufreq/trunk/luci-app-cpufreq
