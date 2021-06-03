@@ -46,7 +46,6 @@ pushd package/community
 # git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome
 
 
-
 # Add luci-app-diskman
 git clone --depth=1 https://github.com/lisaac/luci-app-diskman
 mkdir parted
@@ -61,10 +60,6 @@ mkdir luci-lib-docker
 curl -s -o ./luci-lib-docker/Makefile https://raw.githubusercontent.com/lisaac/luci-lib-docker/master/Makefile
 rm -rf ../lean/luci-app-docker
 
-# Add luci-app-smartdns
-svn co https://github.com/pymumu/smartdns/trunk/package/openwrt ../smartdns
-svn co https://github.com/project-openwrt/openwrt/trunk/package/ntlf9t/luci-app-smartdns ../luci-app-smartdns
-
 # Add luci-app-serverchan
 git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
@@ -78,9 +73,9 @@ git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 rm -rf ../lean/luci-theme-argon
 
-git clone --depth=1 https://github.com/kenzok8/openwrt-packages.git
-rm -rf ./openwrt-packages/luci-app-ssr-plus
+git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 rm -rf ./openwrt-packages/luci-app-serverchan
+#rm -rf ./openwrt-packages/luci-app-ssr-plus
 # rm -rf ./openwrt-packages/luci-app-openclash
 # rm -rf ./openwrt-packages/luci-theme-argon_new
 
