@@ -45,12 +45,7 @@ pushd package/community
 # depth用于指定克隆深度，为1即表示只克隆最近一次commit.
 # git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome
 
-# Add luci-app-amlogic
-svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
-svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-lib-fs
 
-# Add luci-app-cpufreq
-# svn co https://github.com/roacn/luci-app-cpufreq/trunk/luci-app-cpufreq
 
 # Add luci-app-diskman
 git clone --depth=1 https://github.com/lisaac/luci-app-diskman
