@@ -22,6 +22,7 @@ env:
   CONFIG_FILE: plus.config
   DIY_SH: diy.sh
   TZ: Asia/Shanghai
+  SSH_ACTIONS: false
   RELEASE: true
 
 jobs:
