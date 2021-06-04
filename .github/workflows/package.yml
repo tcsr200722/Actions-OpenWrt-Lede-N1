@@ -61,7 +61,7 @@ jobs:
       with:
         name: ${{ env.DATE }} / N1-Openwrt | 编译
         allowUpdates: true
-        tag: N1_${{ env.version }}
+        tag: ${{ env.version }}
         commit: master
         token: ${{ secrets.RELEASES_TOKEN   }}
         body: |
