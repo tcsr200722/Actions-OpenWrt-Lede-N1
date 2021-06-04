@@ -60,6 +60,10 @@ cd    /mnt/mmcblk2p4
 chmod   755  update-amlogic-openwrt.sh
 ./update-amlogic-openwrt.sh    xxxxx.img
 ```
+
+# 固件发布:
+
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/roacn/Actions-OpenWrt-Lede-N1?style=for-the-badge&label=下载&&color=00aa66)](https://github.com/roacn/Actions-OpenWrt-Lede-N1/releases/latest)
 ------
  # 感激 
   * [mingxiaoyu](https://github.com/mingxiaoyu)
