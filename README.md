@@ -1,11 +1,11 @@
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=roacn)](https://github.com/anuraghazra/github-readme-stats)
+![license](https://img.shields.io/github/license/roacn/Actions-OpenWrt-Lede-N1?color=ff69b4)
+![N1_plus](https://github.com/roacn/Actions-OpenWrt-Lede-N1/actions/workflows/single_plus.yml/badge.svg?event=schedule)
+![N1_mini](https://github.com/roacn/Actions-OpenWrt-Lede-N1/actions/workflows/single_mini.yml/badge.svg?event=schedule)
+![Build lede](https://github.com/roacn/Actions-OpenWrt-Lede-N1/actions/workflows/N1_Multi.yml/badge.svg?event=schedule)
+![code-size](https://img.shields.io/github/languages/code-size/roacn/Actions-OpenWrt-Lede-N1?color=blueviolet)
 
 N1 OpenWrt.
  ![applist](https://github.com/roacn/N1Openwrt/blob/master/imgs/N1-OpenWrt.jpg?raw=true)
-
-# 喜欢的可以给个star。要自己编译独一无二的可以fork。如果有人要贝壳云等其他的，可以提issue。我就加上去。再次感谢各位。
-
-默认自定义防火墙: iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
 
 
 
@@ -24,22 +24,21 @@ N1 OpenWrt.
  * Password: password
  * Default IP: 192.168.1.2
 ------
+## 防火墙
+默认自定义防火墙: iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
 
 ## app list:（mini 图不代表最新的）
  * jd-dailybonus
+ * passwall
  * ssr+
  * ServerChan
  * aria2
  * ddns
  * samba4
  * KMS 
- * frp
  * docker
- * cifs(挂载 SMB/CIFS 网络共享文件夹)
- * vsftpd
  * zerotier
  * flowoffload
- * WIFI
  
  ![applist](https://github.com/mingxiaoyu/N1Openwrt/blob/master/imgs/mini.jpg?raw=true)
  
