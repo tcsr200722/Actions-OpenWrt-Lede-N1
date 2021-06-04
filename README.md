@@ -1,3 +1,5 @@
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=roacn)](https://github.com/anuraghazra/github-readme-stats)
+
 N1 OpenWrt.
  ![applist](https://github.com/roacn/N1Openwrt/blob/master/imgs/N1-OpenWrt.jpg?raw=true)
 
