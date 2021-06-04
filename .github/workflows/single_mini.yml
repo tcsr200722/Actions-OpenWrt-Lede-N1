@@ -10,7 +10,7 @@ name: N1_Single_Mini_Version
 
 on:
   repository_dispatch:
-    types: [single]
+    types: [single_mini]
   workflow_dispatch:
     inputs:
       ssh:
