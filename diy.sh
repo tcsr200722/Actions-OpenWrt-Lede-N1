@@ -48,19 +48,18 @@ pushd package/community
 # depth用于指定克隆深度，为1即表示只克隆最近一次commit.
 # git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome
 
-
 # Add luci-app-diskman
 git clone --depth=1 https://github.com/lisaac/luci-app-diskman
 mkdir parted
 cp luci-app-diskman/Parted.Makefile parted/Makefile
 
-# luci-app-dockerman
-# git clone --depth=1 https://github.com/lisaac/luci-lib-docker
-# git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
 # Add luci-app-dockerman
-git clone --depth=1 https://github.com/KFERMercer/luci-app-dockerman
-mkdir luci-lib-docker
-curl -s -o ./luci-lib-docker/Makefile https://raw.githubusercontent.com/lisaac/luci-lib-docker/master/Makefile
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
+# Add luci-app-dockerman
+#git clone --depth=1 https://github.com/KFERMercer/luci-app-dockerman
+#mkdir luci-lib-docker
+#curl -s -o ./luci-lib-docker/Makefile https://raw.githubusercontent.com/lisaac/luci-lib-docker/master/Makefile
 rm -rf ../lean/luci-app-docker
 
 # Add luci-app-serverchan
@@ -78,7 +77,7 @@ rm -rf ../lean/luci-theme-argon
 
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 rm -rf ./openwrt-packages/luci-app-serverchan
-#rm -rf ./openwrt-packages/luci-app-ssr-plus
+# rm -rf ./openwrt-packages/luci-app-ssr-plus
 # rm -rf ./openwrt-packages/luci-app-openclash
 rm -rf ./openwrt-packages/luci-theme-argon_new
 
