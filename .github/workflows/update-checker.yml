@@ -19,7 +19,7 @@ on:
         required: false
         default: 'false'
   schedule:
-    - cron: 0 3 */3 * *
+    - cron: 0 1 */3 * *
 
 env:
     MULTIPLE_BUILD: true
