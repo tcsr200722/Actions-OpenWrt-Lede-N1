@@ -109,7 +109,7 @@ jobs:
         echo "::set-output name=status::success"  
         
     - name: Package OpenWrt with flippy script 使用flippy脚本打包
-      uses: mingxiaoyu/package-flippy-openwrt@main
+      uses: roacn/package-flippy-openwrt@main
       with:
         types: s905d
         out: ${{ env.UPLOAD }}
