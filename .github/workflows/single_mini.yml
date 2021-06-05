@@ -58,7 +58,7 @@ jobs:
         echo "UPLOAD=$PWD" >> $GITHUB_ENV
         
         echo "tag_name=$(date +%Y%m%d%H)" >> $GITHUB_ENV
-        echo "FILE_DATE=_$(date +"%Y%m%d%H")" >> $GITHUB_ENV
+        echo "FILE_DATE=_$(date +"%Y%m-%d%H")" >> $GITHUB_ENV
         echo "FILE_TIME=$(date "+%Y年%m月%d日-%H点")" >> $GITHUB_ENV
                 
     - name: Clone source code 下载固件源码
