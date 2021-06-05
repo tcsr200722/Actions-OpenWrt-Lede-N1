@@ -53,13 +53,13 @@ mkdir parted
 cp luci-app-diskman/Parted.Makefile parted/Makefile
 
 # luci-app-dockerman
-# git clone --depth=1 https://github.com/lisaac/luci-lib-docker
-# git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
 # Add luci-app-dockerman
-git clone --depth=1 https://github.com/KFERMercer/luci-app-dockerman
-mkdir luci-lib-docker
-curl -s -o ./luci-lib-docker/Makefile https://raw.githubusercontent.com/lisaac/luci-lib-docker/master/Makefile
-rm -rf ../lean/luci-app-docker
+# git clone --depth=1 https://github.com/KFERMercer/luci-app-dockerman
+# mkdir luci-lib-docker
+# curl -s -o ./luci-lib-docker/Makefile https://raw.githubusercontent.com/lisaac/luci-lib-docker/master/Makefile
+# rm -rf ../lean/luci-app-docker
 
 # Add luci-app-openclash
 # git clone --depth=1 https://github.com/vernesong/OpenClash
