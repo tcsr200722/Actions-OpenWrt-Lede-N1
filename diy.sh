@@ -1,10 +1,4 @@
 #!/bin/bash
-#=================================================
-# Description: DIY script
-# Lisence: MIT
-# Author: P3TERX
-# Blog: https://p3terx.com
-#=================================================
 
 echo '修改机器名称'
 sed -i 's/OpenWrt/Phicomm-N1/g' package/base-files/files/bin/config_generate
@@ -30,8 +24,8 @@ rm -rf ./luci-app-cpufreq
 git clone https://github.com/roacn/luci-app-cpufreq
 
 #Add luci-app-jd-dailybonus
-rm -rf ./luci-app-jd-dailybonus
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
+#rm -rf ./luci-app-jd-dailybonus
+#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 
 # Add luci-app-ssr-plus
 git clone --depth=1 https://github.com/fw876/helloworld
@@ -52,25 +46,26 @@ pushd package/community
 # depth用于指定克隆深度，为1即表示只克隆最近一次commit.
 # git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome
 
+
 # Add luci-app-diskman
 git clone --depth=1 https://github.com/lisaac/luci-app-diskman
 mkdir parted
 cp luci-app-diskman/Parted.Makefile parted/Makefile
 
+# luci-app-dockerman
+# git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+# git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
 # Add luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker
-git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
-# Add luci-app-dockerman
-#git clone --depth=1 https://github.com/KFERMercer/luci-app-dockerman
-#mkdir luci-lib-docker
-#curl -s -o ./luci-lib-docker/Makefile https://raw.githubusercontent.com/lisaac/luci-lib-docker/master/Makefile
+git clone --depth=1 https://github.com/KFERMercer/luci-app-dockerman
+mkdir luci-lib-docker
+curl -s -o ./luci-lib-docker/Makefile https://raw.githubusercontent.com/lisaac/luci-lib-docker/master/Makefile
 rm -rf ../lean/luci-app-docker
-
-# Add luci-app-serverchan
-git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add luci-app-openclash
 # git clone --depth=1 https://github.com/vernesong/OpenClash
+
+# Add luci-app-serverchan
+git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add luci-app-onliner (need luci-app-nlbwmon)
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
@@ -81,9 +76,9 @@ rm -rf ../lean/luci-theme-argon
 
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 rm -rf ./openwrt-packages/luci-app-serverchan
-# rm -rf ./openwrt-packages/luci-app-ssr-plus
-# rm -rf ./openwrt-packages/luci-app-openclash
+rm -rf ./openwrt-packages/luci-app-ssr-plus
 rm -rf ./openwrt-packages/luci-theme-argon_new
+rm -rf ./openwrt-packages/luci-app-jd-dailybonus
 
 git clone --depth=1 https://github.com/kenzok8/small
 rm -rf ./small/v2ray-plugin
