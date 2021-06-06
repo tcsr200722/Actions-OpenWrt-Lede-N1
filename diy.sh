@@ -61,7 +61,7 @@ cp luci-app-diskman/Parted.Makefile parted/Makefile
 # curl -s -o ./luci-lib-docker/Makefile https://raw.githubusercontent.com/lisaac/luci-lib-docker/master/Makefile
 svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
-rm -rf ../lean/luci-app-docker
+# rm -rf ../lean/luci-app-docker
 
 
 # Add luci-app-openclash
