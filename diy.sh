@@ -56,14 +56,22 @@ cp luci-app-diskman/Parted.Makefile parted/Makefile
 # Add luci-app-dockerman
 # git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 # git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
+# svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker
+# svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
+
 # Add luci-app-dockerman
 # git clone --depth=1 https://github.com/KFERMercer/luci-app-dockerman
 # mkdir luci-lib-docker
 # curl -s -o ./luci-lib-docker/Makefile https://raw.githubusercontent.com/lisaac/luci-lib-docker/master/Makefile
-svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker
-svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
 # rm -rf ../lean/luci-app-docker
 
+# Add luci-app-dockerman
+svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+if [ -e feeds/packages/utils/docker-ce ];then
+	sed -i '/dockerd/d' package/luci-app-dockerman/Makefile
+	sed -i 's/+docker/+docker-ce/g' package/luci-app-dockerman/Makefile
+fi
 
 # Add luci-app-openclash
 # git clone --depth=1 https://github.com/vernesong/OpenClash
