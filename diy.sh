@@ -29,13 +29,13 @@ git clone https://github.com/roacn/luci-app-cpufreq
 #git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
 
 # Add luci-app-ssr-plus
-git clone --depth=1 https://github.com/fw876/helloworld
-cat > helloworld/luci-app-ssr-plus/root/etc/ssrplus/black.list << EOF
-services.googleapis.cn
-googleapis.cn
-heroku.com
-githubusercontent.com 
-EOF
+# git clone --depth=1 https://github.com/fw876/helloworld
+# cat > helloworld/luci-app-ssr-plus/root/etc/ssrplus/black.list << EOF
+# services.googleapis.cn
+# googleapis.cn
+# heroku.com
+# githubusercontent.com 
+# EOF
 popd
 
 # Clone community packages to package/community
