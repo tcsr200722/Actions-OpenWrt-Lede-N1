@@ -16,6 +16,7 @@ pushd package/lean
 
 # Add luci-app-amlogic
 svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
+# luci-lib-fs为依赖库
 # svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-lib-fs
 
 # Add luci-app-cpufreq
