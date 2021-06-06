@@ -23,17 +23,6 @@ rm -rf ./luci-app-cpufreq
 # svn co https://github.com/roacn/luci-app-cpufreq/trunk/luci-app-cpufreq
 git clone https://github.com/roacn/luci-app-cpufreq
 
-# Add luci-app-dockerman
-rm -rf ./luci-app-docker
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker
-git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
-# Add luci-app-dockerman
-# git clone --depth=1 https://github.com/KFERMercer/luci-app-dockerman
-# mkdir luci-lib-docker
-# curl -s -o ./luci-lib-docker/Makefile https://raw.githubusercontent.com/lisaac/luci-lib-docker/master/Makefile
-# rm -rf ../lean/luci-app-docker
-
-
 #Add luci-app-jd-dailybonus
 #rm -rf ./luci-app-jd-dailybonus
 #git clone https://github.com/jerrykuku/luci-app-jd-dailybonus
@@ -63,7 +52,16 @@ git clone --depth=1 https://github.com/lisaac/luci-app-diskman
 mkdir parted
 cp luci-app-diskman/Parted.Makefile parted/Makefile
 
-
+# Add luci-app-dockerman
+# git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+# git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
+# Add luci-app-dockerman
+# git clone --depth=1 https://github.com/KFERMercer/luci-app-dockerman
+# mkdir luci-lib-docker
+# curl -s -o ./luci-lib-docker/Makefile https://raw.githubusercontent.com/lisaac/luci-lib-docker/master/Makefile
+svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker
+svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
+rm -rf ../lean/luci-app-docker
 
 
 # Add luci-app-openclash
