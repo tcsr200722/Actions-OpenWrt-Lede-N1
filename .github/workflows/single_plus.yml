@@ -106,7 +106,7 @@ jobs:
         
         cp .config ${UPLOAD}/plus.config
         cd bin/targets/*/*
-        cp openwrt-armvirt-64-default-rootfs.tar.gz  ${UPLOAD}/openwrt-armvirt-64-default-rootfs.tar.gz
+        cp openwrt-armvirt-64-default-rootfs.tar.gz  ${UPLOAD}/openwrt-armvirt-64-default-rootfs-plus.tar.gz
         count=` find -name '*.xz' | wc -l `
         if [  $count -gt 0 ] ; then
             cp -r *.xz ${UPLOAD}/
@@ -118,6 +118,7 @@ jobs:
       with:
         types: s905d
         out: ${{ env.UPLOAD }}
+        sub-name: plus
         openwrt-path: $GITHUB_WORKSPACE/openwrt/bin/targets/*/*
    
     - name: Create release 发布至release
