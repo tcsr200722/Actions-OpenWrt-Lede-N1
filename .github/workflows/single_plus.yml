@@ -90,25 +90,28 @@ jobs:
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
       env:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}        
         
-    - name: Compile Firmware 编译固件
+    - name: Compile Firmware
       id: compile
       run: |
         cd openwrt
-        cp .config ${UPLOAD}/plus.config
         make defconfig
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
-        find dl -size -1024c -exec rm -f {} \;        
+        find dl -size -1024c -exec rm -f {} \;
         echo -e "$(nproc) thread compile"
         
         make -j$(nproc) || make -j1 || make -j1 V=s
         
+        cp .config ${UPLOAD}/plus.config
         cd bin/targets/*/*
         cp openwrt-armvirt-64-default-rootfs.tar.gz  ${UPLOAD}/openwrt-armvirt-64-default-rootfs.tar.gz
-        cp -r *.xz ${UPLOAD}/
-        echo "::set-output name=status::success" 
+        count=` find -name '*.xz' | wc -l `
+        if [  $count -gt 0 ] ; then
+            cp -r *.xz ${UPLOAD}/
+        fi
+        echo "::set-output name=status::success"       
         
     - name: Package OpenWrt with flippy script 使用flippy脚本打包
       uses: roacn/package-flippy-openwrt@main
