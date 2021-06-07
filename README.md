@@ -15,6 +15,8 @@
 [![P3TERX](https://img.shields.io/badge/actions-P3TERX-success.svg?style=flat&logo=appveyor)](https://github.com/P3TERX/Actions-OpenWrt)
 [![mingxiaoyu](https://img.shields.io/badge/actions-mingxiaoyu-orange.svg?style=flat&logo=appveyor)](https://github.com/mingxiaoyu)
 [![helloworld](https://img.shields.io/badge/helloworld-fw876-yellow.svg?style=flat&logo=appveyor)](https://github.com/fw876/helloworld)
+[![ssrplus](https://img.shields.io/badge/ssrplus-kenzok8-blue.svg?style=flat&logo=appveyor)](https://github.com/kenzok8)
+
 
 
 # 如何使用
