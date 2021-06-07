@@ -65,14 +65,6 @@ cp luci-app-diskman/Parted.Makefile parted/Makefile
 # curl -s -o ./luci-lib-docker/Makefile https://raw.githubusercontent.com/lisaac/luci-lib-docker/master/Makefile
 # rm -rf ../lean/luci-app-docker
 
-# Add luci-app-dockerman
-svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker
-if [ -e feeds/packages/utils/docker-ce ];then
-	sed -i '/dockerd/d' package/luci-app-dockerman/Makefile
-	sed -i 's/+docker/+docker-ce/g' package/luci-app-dockerman/Makefile
-fi
-
 # Add luci-app-openclash
 # git clone --depth=1 https://github.com/vernesong/OpenClash
 
@@ -99,6 +91,15 @@ rm -rf ./small/xray-plugin
 rm -rf ./small/shadowsocks-rust
 
 popd
+
+
+# Add luci-app-dockerman
+svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+if [ -e feeds/packages/utils/docker-ce ];then
+	sed -i '/dockerd/d' package/luci-app-dockerman/Makefile
+	sed -i 's/+docker/+docker-ce/g' package/luci-app-dockerman/Makefile
+fi
 
 # Mod zzz-default-settings
 sed -i "/commit luci/i\uci set luci.main.mediaurlbase='/luci-static/argon'" package/lean/default-settings/files/zzz-default-settings
