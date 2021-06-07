@@ -96,15 +96,15 @@ jobs:
       id: compile
       run: |
         cd openwrt
+        cp .config ${UPLOAD}/plus.config
         make defconfig
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
-        find dl -size -1024c -exec rm -f {} \;
+        find dl -size -1024c -exec rm -f {} \;        
         echo -e "$(nproc) thread compile"
         
         make -j$(nproc) || make -j1 || make -j1 V=s
         
-        cp .config ${UPLOAD}/plus.config
         cd bin/targets/*/*
         cp openwrt-armvirt-64-default-rootfs.tar.gz  ${UPLOAD}/openwrt-armvirt-64-default-rootfs.tar.gz
         cp -r *.xz ${UPLOAD}/
