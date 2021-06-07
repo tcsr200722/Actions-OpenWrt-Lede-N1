@@ -14,6 +14,9 @@
 [![unifreq](https://img.shields.io/badge/package-unifreq-red.svg?style=flat&logo=appveyor)](https://github.com/unifreq/openwrt_packit) 
 [![P3TERX](https://img.shields.io/badge/actions-P3TERX-success.svg?style=flat&logo=appveyor)](https://github.com/P3TERX/Actions-OpenWrt)
 [![P3TERX](https://img.shields.io/badge/actions-mingxiaoyu-orange.svg?style=flat&logo=appveyor)](https://github.com/mingxiaoyu)
+[![mingxiaoyu](https://img.shields.io/badge/actions-mingxiaoyu-orange.svg?style=flat&logo=appveyor)](https://github.com/mingxiaoyu)
+[![helloworld](https://img.shields.io/badge/helloworld-fw876-yellow.svg?style=flat&logo=appveyor)](https://github.com/fw876/helloworld)
+
 
 # 如何使用
 1. fork项目
