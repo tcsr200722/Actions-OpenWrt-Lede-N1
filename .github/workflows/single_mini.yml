@@ -104,7 +104,7 @@ jobs:
         
         cp .config ${UPLOAD}/mini.config
         cd bin/targets/*/*
-        cp openwrt-armvirt-64-default-rootfs.tar.gz  ${UPLOAD}/openwrt-armvirt-64-default-rootfs.tar.gz
+        cp openwrt-armvirt-64-default-rootfs.tar.gz  ${UPLOAD}/openwrt-armvirt-64-default-rootfs-mini.tar.gz
         count=` find -name '*.xz' | wc -l `
         if [  $count -gt 0 ] ; then
             cp -r *.xz ${UPLOAD}/
@@ -116,6 +116,7 @@ jobs:
       with:
         types: s905d
         out: ${{ env.UPLOAD }}
+        sub-name: mini
         openwrt-path: $GITHUB_WORKSPACE/openwrt/bin/targets/*/*
    
     - name: Create release 发布至release
