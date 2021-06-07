@@ -9,9 +9,9 @@
 
 # 源码来源：
 
-[![Lean](https://img.shields.io/badge/package-Lean-blueviolet.svg?style=flat&logo=appveyor)](https://github.com/coolsnowwolf/lede) 
+[![Lean](https://img.shields.io/badge/source-Lean-blueviolet.svg?style=flat&logo=appveyor)](https://github.com/coolsnowwolf/lede) 
 [![ophub](https://img.shields.io/badge/kernel-ophub-violet.svg?style=flat&logo=appveyor)](https://github.com/ophub/amlogic-s9xxx-openwrt) 
-[![unifreq](https://img.shields.io/badge/scripts-unifreq-red.svg?style=flat&logo=appveyor)](https://github.com/unifreq/openwrt_packit) 
+[![unifreq](https://img.shields.io/badge/package-unifreq-red.svg?style=flat&logo=appveyor)](https://github.com/unifreq/openwrt_packit) 
 [![P3TERX](https://img.shields.io/badge/Actions-P3TERX-success.svg?style=flat&logo=appveyor)](https://github.com/P3TERX/Actions-OpenWrt)
 
 # 如何使用
