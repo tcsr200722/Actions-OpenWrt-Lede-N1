@@ -125,7 +125,7 @@ jobs:
       with:
         name: ${{ env.DATE }} 🚀 / N1_Single_Mini_Version | 编译
         allowUpdates: true
-        tag: ${{ env.tag_name }}_Mini
+        tag: ${{ env.tag_name }}-Mini
         commit: master
         token: ${{ secrets.RELEASES_TOKEN  }}
         body: |
