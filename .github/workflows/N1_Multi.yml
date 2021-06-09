@@ -1,7 +1,7 @@
 #=================================================
 # Description: Build Phicomm N1 OpenWrt using GitHub Actions
 # Lisence: MIT
-# Author: mingxiaoyu
+# Author: Ss
 #=================================================
 
 name: N1_Multiple_Version
