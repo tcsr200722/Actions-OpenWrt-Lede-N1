@@ -68,6 +68,8 @@ jobs:
         
         cd /upload
         echo "UPLOAD=$PWD" >> $GITHUB_ENV
+        
+        echo "tag_name=$(date +%Y%m%d-%H%M)" >> $GITHUB_ENV
    
     - name: Initialization Environment II 初始化编译环境II
       working-directory: /workdir
@@ -111,7 +113,6 @@ jobs:
         if [  $count -gt 0 ] ; then
             cp -r *.xz ${UPLOAD}/
         fi
-        echo "tag_name=$(date +%Y%m%d-%H%M)" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d %H:%M")"  >> $GITHUB_ENV
         echo "::set-output name=status::success" 
         
