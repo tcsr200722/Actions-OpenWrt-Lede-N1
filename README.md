@@ -38,10 +38,10 @@
 默认自定义防火墙: iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
 
 ## app list:（mini 图不代表最新的）
- *adbyby-plus
- *adguardhome
- *airplay2
- *amlogic
+ * adbyby-plus
+ * adguardhome
+ * airplay2
+ * amlogic
  *amule
  *argon-config
  *aria2
