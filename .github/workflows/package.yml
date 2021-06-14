@@ -64,7 +64,7 @@ jobs:
         allowUpdates: true
         tag: ${{ env.version }}
         commit: master
-        token: ${{ secrets.RELEASES_TOKEN   }}
+        token: ${{ secrets.RELEASES_TOKEN }}
         body: |
           默认IP：192.168.1.2 默认密码： password
           全新刷入emmc方法：
