@@ -60,7 +60,7 @@ jobs:
       if:  env.RELEASE == 'true' && !cancelled()
       uses: ncipollo/release-action@v1
       with:
-        name: ${{ env.DATE }} / N1-Openwrt | 编译
+        name: ${{ env.DATE }} 🚀 / N1-Openwrt | 编译
         allowUpdates: true
         tag: ${{ env.version }}
         commit: master
