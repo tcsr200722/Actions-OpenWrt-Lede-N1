@@ -38,17 +38,49 @@
 默认自定义防火墙: iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
 
 ## app list:（mini 图不代表最新的）
- * jd-dailybonus
- * passwall
- * ssr+
- * ServerChan
- * aria2
- * ddns
- * samba4
- * KMS 
- * docker
- * zerotier
- * flowoffload
+*adbyby-plus
+*adguardhome
+*airplay2
+*amlogic
+*amule
+*argon-config
+*aria2
+*baidupcs-web
+*cifs-mount
+*cpufreq
+*diskman
+*dockerman
+*flowoffload
+*frpc
+*haproxy-tcp
+*hd-idle
+*jd-dailybonus
+*kodexplorer
+*minidlna
+*mwan3
+*mwan3helper
+*netdata
+*nfs
+*nps
+*onliner
+*openclash
+*openvpn
+*passwall
+*qbittorrent
+*samba4
+*serverchan
+*shairplay
+*smartdns
+*sqm
+*ssr-plus
+*syncdial
+*transmission
+*ttyd
+*udpxy
+*unblockmusic
+*wrtbwmon
+*xlnetacc
+*zerotier
  
  ![applist](https://github.com/mingxiaoyu/N1Openwrt/blob/master/imgs/mini.jpg?raw=true)
  
