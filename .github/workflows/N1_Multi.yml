@@ -126,6 +126,7 @@ jobs:
         openwrt-path: $GITHUB_WORKSPACE/openwrt/bin/targets/*/*
         
     - name: Create release 创建release标签
+      id: release
       if: steps.compile.outputs.status == 'success' && env.RELEASE == 'true' && !cancelled()
       uses: ncipollo/release-action@v1
       with:
@@ -145,7 +146,7 @@ jobs:
 
     - name: Wechat notice 微信通知
       uses: emon100/Action-Serverchan@v2
-      if: steps.organize.outputs.status == 'success' && env.SERVERCHAN_SCKEY == 'true' && !cancelled()
+      if: steps.release.outputs.status == 'success' && env.SERVERCHAN_SCKEY == 'true' && !cancelled()
       with:
         SCKEY: ${{ secrets.SERVERCHAN_SCKEY }}
         text: 恭喜主人Phicomm N1固件编译成功！
