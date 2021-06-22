@@ -43,24 +43,14 @@ popd
 
 # Clone community packages to package/community
 mkdir package/community
-
 pushd package/community
-
-# Add luci-app-adguardhome
-# depth用于指定克隆深度，为1即表示只克隆最近一次commit.
-# git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome
 
 
 # Add luci-app-diskman
+# depth用于指定克隆深度，为1即表示只克隆最近一次commit.
 git clone --depth=1 https://github.com/lisaac/luci-app-diskman
 mkdir parted
 cp luci-app-diskman/Parted.Makefile parted/Makefile
-
-# Add luci-app-dockerman
-# git clone --depth=1 https://github.com/lisaac/luci-lib-docker
-# git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
-# svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker
-# svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
 
 # Add luci-app-openclash
 # git clone --depth=1 https://github.com/vernesong/OpenClash
@@ -91,6 +81,8 @@ popd
 
 
 # Add luci-app-dockerman
+# git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+# git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker package/luci-lib-docker
 if [ -e feeds/packages/utils/docker-ce ];then
