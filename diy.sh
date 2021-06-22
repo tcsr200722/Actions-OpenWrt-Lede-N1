@@ -3,14 +3,12 @@
 echo '修改机器名称'
 sed -i 's/OpenWrt/Phicomm-N1/g' package/base-files/files/bin/config_generate
 
-# Modify default IP
 echo '修改默认LAN口IP'
 sed -i 's/192.168.1.1/192.168.1.2/g' package/base-files/files/bin/config_generate
 
 echo '修改时区'
 sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
-# 修改N1做旁路由的防火墙设置
 echo '修改N1做旁路由的防火墙设置'
 #If the interface is eth0.
 echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
