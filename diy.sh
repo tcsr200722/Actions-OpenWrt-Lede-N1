@@ -15,6 +15,8 @@ echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/c
 #If the interface is br-lan bridged.
 #echo "iptables -t nat -I POSTROUTING -o br-lan -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
 
+
+
 pushd package/lean
 
 # Add luci-app-amlogic
@@ -39,12 +41,14 @@ git clone --depth=1 https://github.com/fw876/helloworld
 # heroku.com
 # githubusercontent.com 
 # EOF
+
 popd
+
+
 
 # Clone community packages to package/community
 mkdir package/community
 pushd package/community
-
 
 # Add luci-app-diskman
 # depth用于指定克隆深度，为1即表示只克隆最近一次commit.
@@ -79,6 +83,7 @@ rm -rf ./small/shadowsocks-rust
 rm -rf ./small/shadowsocksr-libev
 
 popd
+
 
 
 # Add luci-app-dockerman
