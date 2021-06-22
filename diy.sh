@@ -76,6 +76,7 @@ rm -rf ./small/v2ray-plugin
 rm -rf ./small/xray-core
 rm -rf ./small/xray-plugin
 rm -rf ./small/shadowsocks-rust
+rm -rf ./small/shadowsocksr-libev
 
 popd
 
