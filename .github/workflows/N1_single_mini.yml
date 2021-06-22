@@ -27,6 +27,7 @@ env:
   DIY_SH: diy.sh
   TZ: Asia/Shanghai
   RELEASE: true
+  SERVERCHAN_SCKEY: true
 
 jobs:
   build:
@@ -136,6 +137,14 @@ jobs:
              3. ./install-to-emmc.sh
              4. 拔掉U盘，断电重启。
         artifacts:  ${{ env.UPLOAD }}/*
+
+    - name: Wechat notice 微信通知
+      uses: emon100/Action-Serverchan@v2
+      if: steps.organize.outputs.status == 'success' && env.SERVERCHAN_SCKEY == 'true' && !cancelled()
+      with:
+        SCKEY: ${{ secrets.SERVERCHAN_SCKEY }}
+        text: 恭喜主人Phicomm N1固件编译成功！
+        desp: 我亲爱的主人：您「 Actions-OpenWrt-Lede-N1」仓库编译的「  ${{ env.DATE }} 🚀 / N1_Single_Mini_Version | 编译」固件顺利编译完成了！
         
     - name: Remove old Releases 删除旧的release
       uses: dev-drprasad/delete-older-releases@v0.1.0
