@@ -154,7 +154,7 @@ jobs:
         desp: 我亲爱的✨主人✨：您「 Actions-OpenWrt-Lede-N1」仓库编译的「 ${{ env.DATE }} 🚀 / N1-Openwrt | 编译」固件顺利编译完成了！💐
   
     - name: Bot notice 电报机器人信息通知
-      if: steps.tag.outputs.status == 'success' && env.BOT == 'true' && !cancelled()
+      if: steps.release.outputs.status == 'success' && env.BOT == 'true' && !cancelled()
       run: |
         curl -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" -d "text=我亲爱的✨主人✨：您「 Actions-OpenWrt-Lede-N1」仓库编译的「 ${{ env.DATE }} 🚀 / N1-Openwrt | 编译」固件顺利编译完成了！💐" "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
 
