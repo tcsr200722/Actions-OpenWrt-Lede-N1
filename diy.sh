@@ -70,17 +70,20 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 rm -rf ../lean/luci-theme-argon
 
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
+rm -rf ./openwrt-packages/luci-app-jd-dailybonus
 rm -rf ./openwrt-packages/luci-app-serverchan
 rm -rf ./openwrt-packages/luci-app-ssr-plus
 rm -rf ./openwrt-packages/luci-theme-argon_new
-rm -rf ./openwrt-packages/luci-app-jd-dailybonus
+rm -rf ./openwrt-packages/naiveproxy
+rm -rf ./openwrt-packages/tcping
 
 git clone --depth=1 https://github.com/kenzok8/small
+rm -rf ./small/shadowsocks-rust
+rm -rf ./small/shadowsocksr-libev
+rm -rf ./small/v2ray-core
 rm -rf ./small/v2ray-plugin
 rm -rf ./small/xray-core
 rm -rf ./small/xray-plugin
-rm -rf ./small/shadowsocks-rust
-rm -rf ./small/shadowsocksr-libev
 
 popd
 
