@@ -25,9 +25,9 @@ svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
 # svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-lib-fs
 
 # Add luci-app-cpufreq
-# rm -rf ./luci-app-cpufreq
+rm -rf ./luci-app-cpufreq
 # svn co https://github.com/roacn/luci-app-cpufreq/trunk/luci-app-cpufreq
-# git clone https://github.com/roacn/luci-app-cpufreq
+git clone https://github.com/roacn/luci-app-cpufreq
 
 #Add luci-app-jd-dailybonus
 #rm -rf ./luci-app-jd-dailybonus
