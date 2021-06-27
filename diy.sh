@@ -99,8 +99,10 @@ if [ -e feeds/packages/utils/docker-ce ];then
 	sed -i 's/+docker/+docker-ce/g' package/luci-app-dockerman/Makefile
 fi
 
+# 选择argon为默认主题
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 # Mod zzz-default-settings
-sed -i "/commit luci/i\uci set luci.main.mediaurlbase='/luci-static/argon'" package/lean/default-settings/files/zzz-default-settings
+# sed -i "/commit luci/i\uci set luci.main.mediaurlbase='/luci-static/argon'" package/lean/default-settings/files/zzz-default-settings
 
 # Openwrt version
 #version=$(grep "DISTRIB_REVISION=" package/lean/default-settings/files/zzz-default-settings  | awk -F "'" '{print $2}')
