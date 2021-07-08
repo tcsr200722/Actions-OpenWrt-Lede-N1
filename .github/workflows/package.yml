@@ -54,7 +54,7 @@ jobs:
         types: s905d
         out: ${{ env.UPLOAD }}
         sub-name: ${{ env.SUB_VERSION}}
-        openwrt-url: https://github.com/roacn/N1Openwrt/releases/download/$version/openwrt-armvirt-64-default-rootfs-${SUB_VERSION}.tar.gz 
+        openwrt-url: https://github.com/roacn/Actions-OpenWrt-Lede-N1/releases/download/$version/openwrt-armvirt-64-default-rootfs-${SUB_VERSION}.tar.gz 
         
     - name: Create release
       if:  env.RELEASE == 'true' && !cancelled()
