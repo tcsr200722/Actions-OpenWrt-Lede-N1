@@ -28,7 +28,8 @@ env:
   DIY_SH: diy.sh
   TZ: Asia/Shanghai
   RELEASE: true
-  SERVERCHAN_SCKEY: true
+  SERVERCHAN_SCKEY: false
+  BOT: true
 
 jobs:
   build:
@@ -147,7 +148,12 @@ jobs:
         SCKEY: ${{ secrets.SERVERCHAN_SCKEY }}
         text: 恭喜主人Phicomm N1固件编译成功！
         desp: 我亲爱的主人：您「 Actions-OpenWrt-Lede-N1」仓库编译的「 ${{ env.DATE }} 🚀 / N1_Single_Plus_Version | 编译」固件顺利编译完成了！
-        
+    
+    - name: Bot notice 电报机器人信息通知
+      if: steps.compile.outputs.status == 'success' && env.BOT == 'true' && !cancelled()
+      run: |
+        curl -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" -d "text=我亲爱的✨主人✨：您使用「 Actions-OpenWrt-Lede-N1」文件夹编译的${{ env.DATE }} 「 N1_Single_Plus_Version 」固件顺利编译完成了！💐" "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
+
     - name: Remove old Releases 删除旧的release
       uses: dev-drprasad/delete-older-releases@v0.1.0
       if: env.RELEASE == 'true' && !cancelled()
