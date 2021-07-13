@@ -25,9 +25,9 @@ svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
 # svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-lib-fs
 
 # Add luci-app-cpufreq
-rm -rf ./luci-app-cpufreq
+# rm -rf ./luci-app-cpufreq
 # svn co https://github.com/roacn/luci-app-cpufreq/trunk/luci-app-cpufreq
-git clone https://github.com/roacn/luci-app-cpufreq
+# git clone https://github.com/roacn/luci-app-cpufreq
 
 #Add luci-app-jd-dailybonus
 #rm -rf ./luci-app-jd-dailybonus
@@ -103,10 +103,3 @@ fi
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 # Mod zzz-default-settings
 # sed -i "/commit luci/i\uci set luci.main.mediaurlbase='/luci-static/argon'" package/lean/default-settings/files/zzz-default-settings
-
-# Openwrt version
-#version=$(grep "DISTRIB_REVISION=" package/lean/default-settings/files/zzz-default-settings  | awk -F "'" '{print $2}')
-#sed -i '/DISTRIB_REVISION/d' package/lean/default-settings/files/zzz-default-settings
-#echo "echo \"DISTRIB_REVISION='${version} $(TZ=UTC-8 date "+%Y.%m.%d") '\" >> /etc/openwrt_release" >> package/lean/default-settings/files/zzz-default-settings
-#sed -i '/exit 0/d' package/lean/default-settings/files/zzz-default-settings
-#echo "exit 0" >> package/lean/default-settings/files/zzz-default-settings
