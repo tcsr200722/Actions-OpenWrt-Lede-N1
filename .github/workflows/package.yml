@@ -48,14 +48,22 @@ jobs:
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         
-    - name: Package OpenWrt with flippy script
+    - name: Package OpenWrt with flippy script(+o) 
       uses: roacn/package-flippy-openwrt@main
       with:
         types: s905d
         out: ${{ env.UPLOAD }}
         sub-name: ${{ env.SUB_VERSION}}
         openwrt-url: https://github.com/roacn/Actions-OpenWrt-Lede-N1/releases/download/${{ env.version }}/openwrt-armvirt-64-default-rootfs-${{env.SUB_VERSION}}.tar.gz 
-        
+    - name: Package OpenWrt with flippy script(+)     
+      uses: mingxiaoyu/package-flippy-openwrt@main
+      with:
+        types: l1pro,s905d,beikeyun,s905x3
+        kernel-version: latest+
+        out: ${{ env.UPLOAD }}
+        sub-name: ${{ env.SUB_VERSION}}
+        openwrt-url: https://github.com/mingxiaoyu/N1Openwrt/releases/download/${{ env.version }}/openwrt-armvirt-64-default-rootfs-${{ env.SUB_VERSION }}.tar.gz 
+             
     - name: Create release
       if:  env.RELEASE == 'true' && !cancelled()
       uses: ncipollo/release-action@v1
