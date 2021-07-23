@@ -118,7 +118,15 @@ jobs:
         echo "DATE=$(date "+%Y-%m-%d %H:%M")"  >> $GITHUB_ENV
         echo "::set-output name=status::success" 
         
-    - name: Package OpenWrt with flippy script 用flippy脚本打包
+    - name: Package OpenWrt with flippy script(+o) 用flippy脚本打包(+o) 
+      uses: roacn/package-flippy-openwrt@main
+      with:
+        types: s905d
+        out: ${{ env.UPLOAD }}
+        sub-name: ${{ env.SUB_VERSION}}
+        openwrt-path: openwrt/bin/targets/*/*
+    
+    - name: Package OpenWrt with flippy script(+) 用flippy脚本打包(+) 
       uses: roacn/package-flippy-openwrt@main
       with:
         types: s905d
