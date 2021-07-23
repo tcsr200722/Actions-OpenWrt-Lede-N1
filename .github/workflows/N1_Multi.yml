@@ -122,9 +122,10 @@ jobs:
       uses: roacn/package-flippy-openwrt@main
       with:
         types: s905d
+        kernel-version: latest+
         out: ${{ env.UPLOAD }}
         sub-name: ${{ env.SUB_VERSION}}
-        openwrt-path: $GITHUB_WORKSPACE/openwrt/bin/targets/*/*
+        openwrt-path: openwrt/bin/targets/*/*
         
     - name: Create release 创建release标签
       id: release
