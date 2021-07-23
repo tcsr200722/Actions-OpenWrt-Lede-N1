@@ -124,6 +124,7 @@ jobs:
         types: s905d
         out: ${{ env.UPLOAD }}
         sub-name: ${{ env.SUB_VERSION}}
+        whoami: Ss
         openwrt-path: openwrt/bin/targets/*/*
     
     - name: Package OpenWrt with flippy script(+) 用flippy脚本打包(+) 
