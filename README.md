@@ -15,7 +15,7 @@
 [![mingxiaoyu](https://img.shields.io/badge/actions-mingxiaoyu-blue.svg?style=flat&logo=appveyor)](https://github.com/mingxiaoyu)
 [![helloworld](https://img.shields.io/badge/ssr-fw876-blueviolet.svg?style=flat&logo=appveyor)](https://github.com/fw876/helloworld)
 [![apps](https://img.shields.io/badge/app-kenzok8-violet.svg?style=flat&logo=appveyor)](https://github.com/kenzok8)
-[![flippy-packages](https://img.shields.io/badge/app-kenzok8-violet.svg?style=flat&logo=appveyor)](https://github.com/roacn/flippy-packages)
+[![flippy-packages](https://img.shields.io/badge/app-roacn-violet.svg?style=flat&logo=appveyor)](https://github.com/roacn/flippy-packages)
 
 
 
