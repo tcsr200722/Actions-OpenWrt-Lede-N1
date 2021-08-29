@@ -12,8 +12,6 @@ sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='Asia\/Shanghai'/g" 
 echo '修改N1做旁路由的防火墙设置'
 #If the interface is eth0.
 echo "iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
-#If the interface is br-lan bridged.
-#echo "iptables -t nat -I POSTROUTING -o br-lan -j MASQUERADE" >> package/network/config/firewall/files/firewall.user
 
 
 
