@@ -81,7 +81,7 @@ rm -rf ./small/xray-core
 rm -rf ./small/xray-plugin
 
 #add new theme jj
-https://github.com/netitgo/luci-theme-jj.git
+git clone --depth=1 https://github.com/netitgo/luci-theme-jj.git
 
 popd
 
