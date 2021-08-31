@@ -33,20 +33,17 @@ svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic
 
 # Add luci-app-ssr-plus
 git clone --depth=1 https://github.com/fw876/helloworld
-# cat > helloworld/luci-app-ssr-plus/root/etc/ssrplus/black.list << EOF
-# services.googleapis.cn
-# googleapis.cn
-# heroku.com
-# githubusercontent.com 
-# EOF
+cat > helloworld/luci-app-ssr-plus/root/etc/ssrplus/black.list << EOF
+services.googleapis.cn
+googleapis.cn
+heroku.com
+githubusercontent.com 
+EOF
 
-popd
-
-
-
+#popd
 # Clone community packages to package/community
-mkdir package/community
-pushd package/community
+#mkdir package/community
+#pushd package/community
 
 # Add luci-app-diskman
 # depth用于指定克隆深度，为1即表示只克隆最近一次commit.
@@ -82,6 +79,9 @@ rm -rf ./small/v2ray-core
 rm -rf ./small/v2ray-plugin
 rm -rf ./small/xray-core
 rm -rf ./small/xray-plugin
+
+#add new theme jj
+https://github.com/netitgo/luci-theme-jj.git
 
 popd
 
