@@ -152,7 +152,7 @@ jobs:
     - name: Bot notice 电报机器人信息通知
       if: steps.compile.outputs.status == 'success' && env.BOT == 'true' && !cancelled()
       run: |
-        curl -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" -d "text=我亲爱的✨主人✨：您使用「 Actions-OpenWrt-Lede-N1」文件夹编译的${{ env.DATE }} 「 N1_Single_Plus_Version 」固件顺利编译完成了！💐" "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
+        curl -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" -d "text=我亲爱的✨主人✨：您使用「 Actions-OpenWrt-Lede-N1」文件夹编译的${{ env.DATE }} 「 N1_Single_Plus_Version 」固件顺利编译完成了！💐链接：https://github.com/roacn/Actions-OpenWrt-Lede-N1/releases" "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
 
     - name: Remove old Releases 删除旧的release
       uses: dev-drprasad/delete-older-releases@v0.1.0
