@@ -168,7 +168,7 @@ jobs:
     - name: Bot notice 电报机器人信息通知
       if: steps.compile.outputs.status == 'success' && env.BOT == 'true' && !cancelled()
       run: |
-        curl -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" -d "text=我亲爱的✨主人✨：您「 Actions-OpenWrt-Lede-N1」仓库编译的「 ${{ env.DATE }} 🚀 / N1-Openwrt | 编译」固件顺利编译完成了！💐" "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
+        curl -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" -d "text=我亲爱的✨主人✨：您「 Actions-OpenWrt-Lede-N1」仓库编译的「 ${{ env.DATE }} 🚀 / N1-Openwrt | 编译」固件顺利编译完成了！💐链接：https://github.com/roacn/Actions-OpenWrt-Lede-N1/releases" "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage"
 
   cleanjob:
     runs-on: ubuntu-latest
