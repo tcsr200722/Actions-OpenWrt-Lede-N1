@@ -60,10 +60,6 @@ git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 # Add luci-app-onliner (need luci-app-nlbwmon)
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
-# Add luci-theme-argon
-rm -rf ./luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 rm -rf ./openwrt-packages/luci-app-jd-dailybonus
 rm -rf ./openwrt-packages/luci-app-serverchan
@@ -79,6 +75,10 @@ rm -rf ./small/v2ray-core
 rm -rf ./small/v2ray-plugin
 rm -rf ./small/xray-core
 rm -rf ./small/xray-plugin
+
+# Add luci-theme-argon
+rm -rf ./luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 
 #add new theme jj
 git clone --depth=1 https://github.com/netitgo/luci-theme-jj.git
