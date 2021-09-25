@@ -116,17 +116,17 @@ jobs:
         artifacts:  ${{ env.UPLOAD }}/*
         
     - name: Package OpenWrt with flippy script
-      uses: mingxiaoyu/package-flippy-openwrt@main
+      uses: roacn/package-flippy-openwrt@main
       id: package
       with:
         types: l1pro,s905d,beikeyun,s905x3
         out: ${{ env.UPLOAD }}
         sub-name: ${{ env.SUB_VERSION}}
-        whoami: mingxiaoyu
+        whoami: Ss
         openwrt-path: openwrt/bin/targets/*/*
 
     - name: Package OpenWrt with flippy script(+)     
-      uses: mingxiaoyu/package-flippy-openwrt@main
+      uses: roacn/package-flippy-openwrt@main
       with:
         types: l1pro,s905d,beikeyun,s905x3
         kernel-version: latest+
