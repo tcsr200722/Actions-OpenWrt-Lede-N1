@@ -13,6 +13,7 @@ env:
   DIY_SH: diy.sh
   TZ: Asia/Shanghai
   RELEASE: true
+  CACHEFLAG: true
 
 jobs:
   build:
@@ -68,6 +69,13 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt 
         cd openwrt
+       
+    - name: Cache 缓存加速
+      if: env.CACHEFLAG == 'true' && !cancelled()
+      uses: klever1988/cachewrtbuild@main
+      with:
+        ccache: 'true'
+        prefix: ${{ github.workspace }}/openwrt
         
     - name: Update & Install Feeds
       run: |
