@@ -29,6 +29,7 @@ env:
   RELEASE: true
   SERVERCHAN_SCKEY: false
   BOT: true
+  CACHEFLAG: true
 
 jobs:
   build:
@@ -69,6 +70,13 @@ jobs:
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt 
         #[ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default        
         cd openwrt
+    
+    - name: Cache 缓存加速
+      if: env.CACHEFLAG == 'true' && !cancelled()
+      uses: klever1988/cachewrtbuild@main
+      with:
+        ccache: 'true'
+        prefix: ${{ github.workspace }}/openwrt
         
     - name: Update & Install Feeds 下载安装插件
       run: |
