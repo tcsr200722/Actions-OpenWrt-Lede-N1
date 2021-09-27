@@ -145,7 +145,7 @@ jobs:
         openwrt-path: openwrt/bin/targets/*/*
    
     - name: Create release
-      if: steps.package.outputs.status == 'true' && env.RELEASE == 'true' && !cancelled()
+      if: steps.compile.outputs.status == 'true' && env.RELEASE == 'true' && !cancelled()
       uses: ncipollo/release-action@v1
       with:
         name: ${{ env.DATE }} 🚀 / N1-Openwrt | 编译
