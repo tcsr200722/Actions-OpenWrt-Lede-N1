@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![license](https://img.shields.io/github/license/roacn/Actions-OpenWrt-Lede-N1?color=ff69b4)
 ![N1_plus](https://github.com/roacn/Actions-OpenWrt-Lede-N1/actions/workflows/plus.yml/badge.svg)
 ![N1_mini](https://github.com/roacn/Actions-OpenWrt-Lede-N1/actions/workflows/mini.yml/badge.svg)
@@ -5,6 +6,15 @@
 ![code-size](https://img.shields.io/github/languages/code-size/roacn/Actions-OpenWrt-Lede-N1?color=blueviolet)
 
 
+=======
+N1 OpenWrt.
+
+[![lede](https://img.shields.io/badge/github-lede-blue.svg?style=flat&logo=github)](https://github.com/coolsnowwolf/lede)
+![GitHub](https://img.shields.io/github/license/mingxiaoyu/N1Openwrt)
+
+
+# 喜欢的可以给个star。要自己编译独一无二的可以fork。如果有人要贝壳云等其他的，可以提issue。我就加上去。再次感谢各位。
+>>>>>>> upstream/master
 
 # 源码：
 

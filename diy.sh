@@ -54,11 +54,18 @@ cp luci-app-diskman/Parted.Makefile parted/Makefile
 # Add luci-app-openclash
 # git clone --depth=1 https://github.com/vernesong/OpenClash
 
+<<<<<<< HEAD
 # Add luci-app-serverchan
 git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add luci-app-onliner (need luci-app-nlbwmon)
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
+=======
+# Add luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git
+rm -rf ../lean/luci-theme-argon
+>>>>>>> upstream/master
 
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 rm -rf ./openwrt-packages/luci-app-jd-dailybonus
@@ -85,17 +92,26 @@ git clone --depth=1 https://github.com/netitgo/luci-theme-jj.git
 
 popd
 
+<<<<<<< HEAD
 
 
 # Add luci-app-dockerman
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker package/luci-lib-docker
+=======
+# Docker
+svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+>>>>>>> upstream/master
 if [ -e feeds/packages/utils/docker-ce ];then
 	sed -i '/dockerd/d' package/luci-app-dockerman/Makefile
 	sed -i 's/+docker/+docker-ce/g' package/luci-app-dockerman/Makefile
 fi
 
+<<<<<<< HEAD
 # 选择argon为默认主题
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+=======
+>>>>>>> upstream/master
 # Mod zzz-default-settings
 sed -i "/commit luci/i\uci set luci.main.mediaurlbase='/luci-static/argon'" package/lean/default-settings/files/zzz-default-settings
