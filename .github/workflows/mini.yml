@@ -1,28 +1,15 @@
-<<<<<<< HEAD:.github/workflows/plus.yml
-name: N1 plus Version
-
-on:
-  #repository_dispatch:
-  #  types: [plus]
-=======
 name: N1 mini Version
 
 on:
   #repository_dispatch:
   #  types: [mini]
->>>>>>> upstream/master:.github/workflows/mini.yml
   workflow_dispatch:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-<<<<<<< HEAD:.github/workflows/plus.yml
-  SUB_VERSION: plus
-  CONFIG_FILE: plus.config
-=======
   SUB_VERSION: mini
   CONFIG_FILE: mini.config
->>>>>>> upstream/master:.github/workflows/mini.yml
   DIY_SH: diy.sh
   TZ: Asia/Shanghai
   RELEASE: true
