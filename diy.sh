@@ -60,6 +60,11 @@ git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 # Add luci-app-onliner (need luci-app-nlbwmon)
 git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
+# Add luci-theme-argon
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git
+rm -rf ../lean/luci-theme-argon
+
 git clone --depth=1 https://github.com/kenzok8/openwrt-packages
 rm -rf ./openwrt-packages/luci-app-jd-dailybonus
 rm -rf ./openwrt-packages/luci-app-serverchan
@@ -85,11 +90,10 @@ git clone --depth=1 https://github.com/netitgo/luci-theme-jj.git
 
 popd
 
-
-
 # Add luci-app-dockerman
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker package/luci-lib-docker
+
 if [ -e feeds/packages/utils/docker-ce ];then
 	sed -i '/dockerd/d' package/luci-app-dockerman/Makefile
 	sed -i 's/+docker/+docker-ce/g' package/luci-app-dockerman/Makefile

@@ -1,14 +1,3 @@
-#
-# Copyright (c) 2019-2021 P3TERX <https://p3terx.com>
-#
-# This is free software, licensed under the MIT License.
-# See /LICENSE for more information.
-#
-# https://github.com/P3TERX/Actions-OpenWrt
-# File: .github/workflows/update-checker.yml
-# Description: Source code update checker
-#
-
 name: Update Checker
   
 on:
@@ -32,16 +21,14 @@ jobs:
     - name: Get Commit Hash
       id: getHash
       run: |
-        git clone --depth 1 https://github.com/coolsnowwolf/lede
-        cd lede
-        echo "::set-output name=commitHash::$(git rev-parse HEAD)"
+        commitHash=$(curl "https://api.github.com/repos/coolsnowwolf/lede/git/refs/heads/master" | jq '.object.sha')
+        echo "::set-output name=commitHash::$commitHash"
         
     - name: Get helloworld Commit Hash
       id: getHash2
       run: |
-        git clone --depth 1 https://github.com/fw876/helloworld
-        cd helloworld
-        echo "::set-output name=commitHash2::$(git rev-parse HEAD)"  
+        commitHash=$(curl  "https://api.github.com/repos/fw876/helloworld/git/refs/heads/master" | jq '.object.sha')
+        echo "::set-output name=commitHash2::$commitHash"  
         
     - name: Compare Commit Hash
       id: cacheHash
